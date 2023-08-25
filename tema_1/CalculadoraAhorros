@@ -1,0 +1,53 @@
+'''El objetivo es crear un programa con el que puedas calcular
+tus ahorros anuales. El programa deberá calcular cuánto puede ahorrar una persona dado sus
+ingresos por hora, sus horas trabajadas y su gasto de vida semanal.
+
+¿Si el usuario decidiese trabajar a tiempo parcial (25 horas semanales) y decidiese reducir sus
+gastos a 3/4 de lo que gastaba antes, tendría suficiente dinero para sus gastos?'''
+
+# 1. Primero haremos que el programa nos pida nuestro nombre y después imprima un saludo por pantalla 
+print('----------------------------------------------------')
+print('Bienvenido al sistema de calculo de ahorros anuales ')
+print('----------------------------------------------------')
+print( )
+print( )
+nombre = input('¿Como te llamas?')
+print('Hola, ' + nombre)
+print( )
+
+# 2. pedimos el  dinero ganado por hora y las horas trabajadas en la semana 
+dinero_hora = input('¿Cuanto dinero ganas por hora?')
+print( )
+horas_semanales = input('¿Cuantas horas semanales trabajas?')
+print( )
+# 3. obtenemos el salario semanal
+salario_semanal = float(dinero_hora) * float(horas_semanales)
+
+# 4. calculamos las ganancias anuales
+ganancias_anuales = 52 * salario_semanal
+
+# 5. imprime por pantalla la ganancia anual
+print(nombre + ' Tienes una ganacia anual de: ' + str(ganancias_anuales) + ' euros')
+print( )
+# 6. Pedimos los gastos semanales por pantalla
+gastos_semanales = input('¿Cuales son tus gastos semanales?')
+print( )
+# 7. Calculamos el gasto anual
+gasto_anual = float(gastos_semanales) * 52
+
+# 8. Imprime los resultados por pantalla del ahorro anual
+ahorro = ganancias_anuales - gasto_anual
+print('------------------------------------')
+print('su ahorro anual es de: ' + str(ahorro))
+print('------------------------------------')
+print( )
+# 9. Si trabaja a tiempo parcial (25 h) y reducir sus gastos a 3/4 de lo que gastaba, ¿tendría suficiente dinero para sus gastos?
+print('Si decide reducir sus h trabajadas a 25 h/semana y \n reducir sus gastos a 3/4 de lo que gastaba:')
+salario_semanal = float(dinero_hora) * 25 
+ganancias_anuales = salario_semanal * 52
+gasto_anual = float(gasto_anual) * 0.75
+ahorro = ganancias_anuales - gasto_anual
+print( )
+print('------------------------------------')
+print('su ahorro anual sera de: ' + str(ahorro))
+print('------------------------------------')
